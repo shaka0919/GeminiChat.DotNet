@@ -25,10 +25,13 @@ public class GeminiService
         return result;
     }
 
-    // public async Task StreamResponseAsync(Action<string> resultHandler)
-    // {
-    //     await Task.CompletedTask;
-    // }
+    public async Task StreamResponseAsync(Action<string> resultHandler)
+    {
+        await foreach (var data in _client.StreamingRequest(_conversation))
+        {
+            resultHandler(data);
+        }
+    }
 
     public void AppendMessage(string text, MessageRole role = MessageRole.User)
     {
