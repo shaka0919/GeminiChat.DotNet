@@ -1,1 +1,28 @@
-# GeminiChat.DotNet
+# [GeminiChat.DotNet](https://www.nuget.org/packages/GeminiChat.DotNet)
+
+
+## Installlation
+```shell
+> dotnet add package GeminiChat.DotNet
+```
+
+Package Manager:
+
+```shell
+PM > Install-Package GeminiChat.DotNet
+```
+
+## Getting Started
+1. Your API Key for Gemini. You can get it from [here](https://makersuite.google.com/app/apikey).
+2. Install this package on your project with CLI or Nuget Package Manager.
+
+Sample Code:
+```csharp
+var service = new GeminiService("INPUT YOUT API KEY");
+gemini.AppendMessage("Hi!");
+var answer = await gemini.GetResponseAsync();
+gemini.AppendMessage("Who are you?");
+```
+
+**Pull requests are welcome to improve this library.**
+
