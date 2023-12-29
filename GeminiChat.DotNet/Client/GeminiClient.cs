@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace GeminiChat.DotNet;
 
@@ -52,15 +53,15 @@ internal class GeminiClient
         {
             using var stream = await resp.Content.ReadAsStreamAsync();
             using var reader = new StreamReader(stream);
-            string line = null;
-            var pattern = @"""text"":";
+            string line = string.Empty;
 
             while ((line = await reader.ReadLineAsync()) != null)
             {
-                if (line.Contains(pattern))
+                var pattern = @"""text""\s*:\s*""([^""]+)""";
+                var match = Regex.Match(line, pattern);
+                if (match.Success)
                 {
-                    var result = line.Trim()[pattern.Length..].Trim().Trim('"');
-                    yield return result;
+                    yield return match.Groups[1].Value;
                 }
             }
         }

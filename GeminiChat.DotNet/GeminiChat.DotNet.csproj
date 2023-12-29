@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/shaka0919/GeminiChat.DotNet</RepositoryUrl>
     <PackageTags>GoogleGemini.Net; Google; Gemini; Gemini.Net; GenerativeAI; dotnet;</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageReleaseNotes>Init Drop</PackageReleaseNotes>
-    <Version>1.0.3</Version>
+    <PackageReleaseNotes>Support streaming response</PackageReleaseNotes>
+    <Version>1.0.4</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\README.md">
