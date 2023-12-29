@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiChat.DotNet", "GeminiChat.dotnet\GeminiChat.DotNet.csproj", "{F609EE1D-A2CC-4C40-B595-43AB937433A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiChat.Test", "GeminiChat.Test\GeminiChat.Test.csproj", "{9A9780D0-63BF-4184-83AD-832CCE372642}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F609EE1D-A2CC-4C40-B595-43AB937433A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F609EE1D-A2CC-4C40-B595-43AB937433A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F609EE1D-A2CC-4C40-B595-43AB937433A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F609EE1D-A2CC-4C40-B595-43AB937433A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9780D0-63BF-4184-83AD-832CCE372642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9780D0-63BF-4184-83AD-832CCE372642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9780D0-63BF-4184-83AD-832CCE372642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9780D0-63BF-4184-83AD-832CCE372642}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
