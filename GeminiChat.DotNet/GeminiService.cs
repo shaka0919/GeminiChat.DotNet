@@ -20,7 +20,7 @@ public class GeminiService
 
     public async Task<string> GetResponseAsync()
     {
-        var result = await _client.Send(_conversation);
+        var result = await _client.PostAsync(_conversation);
         AppendMessage(result, MessageRole.Model);
         return result;
     }
