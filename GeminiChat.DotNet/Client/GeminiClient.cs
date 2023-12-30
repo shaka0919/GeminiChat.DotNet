@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Json;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
@@ -64,6 +65,7 @@ internal class GeminiClient
                     yield return match.Groups[1].Value;
                 }
             }
+            
         }
         else
         {
