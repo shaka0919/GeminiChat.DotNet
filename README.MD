@@ -18,10 +18,15 @@ PM > Install-Package GeminiChat.DotNet
 
 Sample Code:
 ```csharp
-var service = new GeminiService("INPUT YOUT API KEY");
+var service = new GeminiService("INPUT YOUR API KEY");
 gemini.AppendMessage("Hi!");
 var answer = await gemini.GetResponseAsync();
-gemini.AppendMessage("Who are you?");
+gemini.AppendMessage("Write a story about magic pack.");
+var story = string.Empty;
+await gemini.StreamResponseAsync((dataLine) =>
+{
+    story += dataLine;
+});
 ```
 
 **Pull requests are welcome to improve this library.**

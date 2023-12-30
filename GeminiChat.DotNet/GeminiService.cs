@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Json;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -20,17 +21,20 @@ public class GeminiService
 
     public async Task<string> GetResponseAsync()
     {
-        var result = await _client.Send(_conversation);
+        var result = await _client.PostAsync(_conversation);
         AppendMessage(result, MessageRole.Model);
         return result;
     }
 
     public async Task StreamResponseAsync(Action<string> resultHandler)
     {
+        var result = new StringBuilder();
         await foreach (var data in _client.StreamingRequest(_conversation))
         {
+            result.Append(data);
             resultHandler(data);
         }
+        AppendMessage(result.ToString());
     }
 
     public void AppendMessage(string text, MessageRole role = MessageRole.User)
