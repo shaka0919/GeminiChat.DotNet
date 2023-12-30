@@ -1,5 +1,6 @@
 # [GeminiChat.DotNet](https://www.nuget.org/packages/GeminiChat.DotNet)
-
+[![Nuget](https://img.shields.io/nuget/v/GeminiChat.DotNet.svg)](https://www.nuget.org/packages/GeminiChat.DotNet)
+[![NuGet](https://img.shields.io/nuget/dt/GeminiChat.DotNet.svg)](https://www.nuget.org/packages/GeminiChat.DotNet)
 
 ## Installlation
 ```shell
